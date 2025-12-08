@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Rotator</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script>
+function myFunction() {
+  const dots = document.getElementById("dots");
+  const moreText = document.getElementById("more");
+  const btn = document.getElementById("Aboutme");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btn.textContent = "Read more";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btn.textContent = "Read less";
+    moreText.style.display = "inline";
+  }
+}
+</script>
+
+<body>
+    <div>
+        <h1>Welcome to my digital repository</h1>
+    </div>
+    <div class="wrapper">
+        <h2 class="title">
+            I am a Pranab, <span id="rotating-text"></span>
+        </h2>
+    </div>
+
+    <!-- Script for the different rotating roles -->
+    <script>
+        const text = document.getElementById("rotating-text");
+
+        const words = [
+        { text: "Software Engineer", color: "green" },   
+        { text: "Full-Stack Developer", color: "purple" }, 
+        { text: "Software Developer", color: "red" },
+        { text: "Front-End Developer", color: "orange" },
+        { text: "Back-End Developer", color: "gold" },
+        { text: "Cloud Engineer", color: "blue" },  
+        { text: "UI/UX Engineer", color: "violet" },   
+        { text: "Game Developer", color: "pink" }, 
+        { text: "Cyber Security Analyst", color: "lime" } 
+];
+
+        
+
+        let index = 0;
+
+        function rotateWords() {
+            text.textContent = words[index].text;
+            text.style.color = words[index].color;
+
+            index = (index + 1) % words.length;
+        }
+
+        rotateWords(); 
+        setInterval(rotateWords, 2000);
+    </script>
+
+    <div>
+    <p>
+        Graduate in a Bachelor of Software Engineering (Honors). 
+        <span id="dots">...</span>
+        <span id="more" style="display:none;">
+        Specialising in data
+        structure and algorithms. A fast learner, problem solver, and have a solid foundation in technology.
+        Have a foundational understanding of programming languages such as Python, HTML, JavaScript,
+        C++ and CSS, and able to use developer tools such as Visual Studio Code, PyCharm, Eclipse, and WordPress.
+        </span>
+    </p>
+
+  <button onclick="myFunction()" id="Aboutme">Read more</button>
+    </div>
+
+    <div>
+        <a href="github.com">
+          <div class="app-icon">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGAmqAutcKfUkpoRLfEZkArz5S0-m7kyzO8w&s.png" alt="projectuno">
+          </div>
+          <div class="app-name">Project 1 </div>
+        </a>
+    </div> 
+
+    <div>
+        <a href="github.com">
+          <div class="app-icon">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFFutWDwzWev2_atSfCdUW_saUYQh0qlXfZw&s.png" alt="projectdos">
+          </div>
+          <div class="app-name">Project 2 </div>
+        </a>
+    </div> 
+
+    <div>
+        <a href="github.com">
+          <div class="app-icon">
+            <img src="https://www.hatchwise.com/wp-content/uploads/2023/03/Mr-Beast-Logo-700x394-1.png" alt="projecttres">
+          </div>
+          <div class="app-name">Project 3 </div>
+        </a>
+    </div> 
+
+      
+
+</body>
+</html>
