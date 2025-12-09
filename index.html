@@ -3,114 +3,179 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Text Rotator</title>
-
+    <title>Text Rotator - Portfolio</title>
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
     <!-- External CSS -->
     <link rel="stylesheet" href="style.css">
+    
 </head>
 
-<script>
-function myFunction() {
-  const dots = document.getElementById("dots");
-  const moreText = document.getElementById("more");
-  const btn = document.getElementById("Aboutme");
-
-  if (dots.style.display === "none") {
-    dots.style.display = "inline";
-    btn.textContent = "Read more";
-    moreText.style.display = "none";
-  } else {
-    dots.style.display = "none";
-    btn.textContent = "Read less";
-    moreText.style.display = "inline";
-  }
-}
-</script>
-
 <body>
-    <div>
-        <h1>Welcome to my digital repository</h1>
-    </div>
-    <div class="wrapper">
-        <h2 class="title">
-            I am a Pranab, <span id="rotating-text"></span>
-        </h2>
-    </div>
+    <div class="container">
+        <div class="text-center">
+            <h1 class="display-4 mb-4">Welcome to my digital repository</h1>
+        </div>
+        
+        <div class="wrapper text-center">
+            <h2 class="title">
+                I am Pranab, <span id="rotating-text"></span>
+            </h2>
+        </div>
+        
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10">
+                <p class="lead text-center">
+                    Graduate in a Bachelor of Software Engineering (Honors). 
+                    <span id="dots">...</span>
+                    <span id="more" style="display:none;">
+                        Specialising in data structure and algorithms. A fast learner, problem solver, and have a solid foundation in technology.
+                        Have a foundational understanding of programming languages such as Python, HTML, JavaScript,
+                        C++ and CSS, and able to use developer tools such as Visual Studio Code, PyCharm, Eclipse, and WordPress.
+                    </span>
+                </p>
+                
+                <div class="text-center">
+                    <button onclick="toggleReadMore()" id="Aboutme">Read more</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="cards-container">
+            <!-- Card 1 -->
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJOJN7Z29E_WlbuZEKL-TMypzU0us6md0JG-Hvdv09vjpm9AsJ91Y9vMb-wPJTRGwrW8w&usqp=CAU" class="card-img-top" alt="Project 1">
+                <div class="card-body">
+                    <h5 class="card-title">Calculator</h5>
+                    <p class="card-text">First project</p>
+                    <a href="#" class="btn btn-primary">View</a>
+                </div>
+            </div>
+            
+            <!-- Card 2 -->
+            <div class="card">
+                <img src="https://www.shutterstock.com/image-illustration/magic-castle-defense-guns-on-260nw-576082120.jpg" class="card-img-top" alt="Project 2">
+                <div class="card-body">
+                    <h5 class="card-title">Tower Defence Game</h5>
+                    <p class="card-text">Second project</p>
+                    <button onclick="window.open('https://github.com/PranabT22/Game-publish-at-itch.io', '_blank')">
+                        View
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Card 3 -->
+            <div class="card">
+                <img src="https://thumbs.dreamstime.com/b/currency-exchange-sign-icon-currency-converter-symbol-money-label-36728479.jpg" class="card-img-top" alt="Project 3">
+                <div class="card-body">
+                    <h5 class="card-title">Currency Convertor</h5>
+                    <p class="card-text">Third project</p>
+                    <button onclick="window.open('https://github.com/PranabT22/Java-Projects', '_blank')">
+                        View
+                    </button>
+                    
+                </div>
+            </div>
+            
+            <!-- Card 4 -->
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVpJ1JjzVwdErx7GanuVmIzpEPzgr8Bly81g&s" class="card-img-top" alt="Project 4">
+                <div class="card-body">
+                    <h5 class="card-title">AAIC Dashboard Creation</h5>
+                    <p class="card-text">Fourth project</p>
+                    <button onclick="window.open('https://github.com/PranabT22/Australian-Anti-Ice-Campaign-Dashboard', '_blank')">
+                        View
+                    </button>
+                </div>
+            </div>
 
-    <!-- Script for the different rotating roles -->
-    <script>
-        const text = document.getElementById("rotating-text");
+            <!-- Card 5 -->
+            <div class="card">
+                <img src="https://miro.medium.com/1*MBJj_-LoaSatwWk8dup62g.gif" class="card-img-top" alt="Project 4">
+                <div class="card-body">
+                    <h5 class="card-title">Pokemon SQL Query</h5>
+                    <p class="card-text">Fourth project</p>
+                    <button onclick="window.open('https://github.com/PranabT22/SQL-query-Pokemon-', '_blank')">
+                        View
+                    </button>
+                </div>
+            </div>
 
-        const words = [
-        { text: "Software Engineer", color: "green" },   
-        { text: "Full-Stack Developer", color: "purple" }, 
-        { text: "Software Developer", color: "red" },
-        { text: "Front-End Developer", color: "orange" },
-        { text: "Back-End Developer", color: "gold" },
-        { text: "Cloud Engineer", color: "blue" },  
-        { text: "UI/UX Engineer", color: "violet" },   
-        { text: "Game Developer", color: "pink" }, 
-        { text: "Cyber Security Analyst", color: "lime" } 
-];
+            <!-- Card 6 -->
+            <div class="card">
+                <img src="https://img.freepik.com/free-vector/banking-systems-pictogram-concept_98292-7572.jpg" class="card-img-top" alt="Project 4">
+                <div class="card-body">
+                    <h5 class="card-title">Banking System</h5>
+                    <p class="card-text">Fourth project</p>
+                    <button onclick="window.open('https://github.com/PranabT22/pythonprojects', '_blank')">
+                        View
+                    </button>
+                </div>
+            </div>
 
         
+
+
+    <!-- JavaScript -->
+    <script>
+        // Text rotation functionality
+        const text = document.getElementById("rotating-text");
+        
+        const words = [
+            { text: "Software Engineer", color: "#28a745" },   
+            { text: "Full-Stack Developer", color: "#6f42c1" }, 
+            { text: "Software Developer", color: "#dc3545" },
+            { text: "Front-End Developer", color: "#fd7e14" },
+            { text: "Back-End Developer", color: "#ffc107" },
+            { text: "Cloud Engineer", color: "#007bff" },  
+            { text: "UI/UX Engineer", color: "#6f42c1" },   
+            { text: "Game Developer", color: "#e83e8c" }, 
+            { text: "Cyber Security Analyst", color: "#20c997" } 
+        ];
 
         let index = 0;
 
         function rotateWords() {
             text.textContent = words[index].text;
             text.style.color = words[index].color;
-
             index = (index + 1) % words.length;
         }
 
-        rotateWords(); 
+        rotateWords();
         setInterval(rotateWords, 2000);
+
+        // Read more/less functionality
+        function toggleReadMore() {
+            const moreText = document.getElementById("more");
+            const dots = document.getElementById("dots");
+            const button = document.getElementById("Aboutme");
+            
+            if (moreText.style.display === "none") {
+                moreText.style.display = "inline";
+                dots.style.display = "none";
+                button.textContent = "Read less";
+            } else {
+                moreText.style.display = "none";
+                dots.style.display = "inline";
+                button.textContent = "Read more";
+            }
+        }
+        
+        // Made the cards clickable
+        document.querySelectorAll('.card .btn-primary').forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                // Add your project viewing logic here
+                alert('Project view functionality would go here!');
+            });
+        });
     </script>
 
-    <div>
-    <p>
-        Graduate in a Bachelor of Software Engineering (Honors). 
-        <span id="dots">...</span>
-        <span id="more" style="display:none;">
-        Specialising in data
-        structure and algorithms. A fast learner, problem solver, and have a solid foundation in technology.
-        Have a foundational understanding of programming languages such as Python, HTML, JavaScript,
-        C++ and CSS, and able to use developer tools such as Visual Studio Code, PyCharm, Eclipse, and WordPress.
-        </span>
-    </p>
-
-  <button onclick="myFunction()" id="Aboutme">Read more</button>
-    </div>
-
-    <div>
-        <a href="github.com">
-          <div class="app-icon">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGAmqAutcKfUkpoRLfEZkArz5S0-m7kyzO8w&s.png" alt="projectuno">
-          </div>
-          <div class="app-name">Project 1 </div>
-        </a>
-    </div> 
-
-    <div>
-        <a href="github.com">
-          <div class="app-icon">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFFutWDwzWev2_atSfCdUW_saUYQh0qlXfZw&s.png" alt="projectdos">
-          </div>
-          <div class="app-name">Project 2 </div>
-        </a>
-    </div> 
-
-    <div>
-        <a href="github.com">
-          <div class="app-icon">
-            <img src="https://www.hatchwise.com/wp-content/uploads/2023/03/Mr-Beast-Logo-700x394-1.png" alt="projecttres">
-          </div>
-          <div class="app-name">Project 3 </div>
-        </a>
-    </div> 
-
-      
-
+    <!-- Bootstrap JS (optional, if you need Bootstrap JS features) -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
 </html>
