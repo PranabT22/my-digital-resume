@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 20px;  /* Fixed: added 'px' unit */
     font-family: Arial, sans-serif;
-    background-color: #4BB9FF;  
+    background-color: #4BB9FF;   /* This is actually light blue, not dark */
     color: white;
 }
 
@@ -16,6 +16,33 @@ body {
     font-size: 2.5rem;  /* Fixed: from 30rem to reasonable size */
     margin-bottom: 40px;
     font-family: Arial, sans-serif;
+}
+
+.top-name {
+    display: flex;
+    gap: 20px;        
+    list-style: none;  
+    padding: 0;
+    margin: 40px 0;
+    justify-content: left;
+}
+
+.top-nav {
+    display: flex;
+    gap: 20px;        
+    list-style: none;  
+    padding: 0;
+    margin: 40px 0;
+    justify-content: right;
+}
+
+.category {
+    display: flex;
+    gap: 20px;        
+    list-style: none;  
+    padding: 0;
+    margin: 40px 0;
+    justify-content: center;
 }
 
 #rotating-text {
